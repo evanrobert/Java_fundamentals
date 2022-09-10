@@ -23,3 +23,19 @@ Example Output:
     2. mkdir Terminal_testing
     3. //...
 
+    1. cd  /documents/codingNomads
+    2.Mkdir Terminal_testing
+    3. cd terminal_testing
+    4. Touch testing1, testing2, testing3
+    5. PWD
+    6. ls -a
+    7. MKdir Terminal_testing2
+    8. cp testing1 Terminal_testing2
+    9. mv testing2 Terminal_testing2
+    10.vim.testing2.txt "this is Txt"
+    11.cat > Testing4 "This is txt"
+    12.?
+
+
+
+

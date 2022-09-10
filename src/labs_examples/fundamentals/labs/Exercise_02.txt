@@ -32,3 +32,16 @@ Cloning repository from Github
     3. Create new repository on Github
     4. Add new remote on local machine
     5. Push to new Github repository
+    //
+
+
+    1. cd documents codingnomads
+    2.Mkdir Git_practice
+    3. git init
+    4. touch gitpractice1
+    5. cat gitpractice "this is a new file"
+    6. git commit add (URL)
+    7. Git add gitpractice1
+    8.git log
+    9. git remote -v
+    10. git push -u evanrobert master
