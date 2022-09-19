@@ -11,6 +11,11 @@ package labs_examples.datatypes_operators.labs;
 public class Exercise_06 {
 
     public static void main(String[] args) {
+        double volume =Math.PI*3.14*3.14*5;
+        System.out.println("volume equals " +volume);
+        //volume =6.28
+        double surface_area = 2* Math.PI* 3.14 * (3.14 + 5);
+        System.out.println("surface area equals " +surface_area);
 
         // write code here
 

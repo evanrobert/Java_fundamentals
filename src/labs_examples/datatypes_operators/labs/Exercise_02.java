@@ -21,9 +21,22 @@ package labs_examples.datatypes_operators.labs;
 
 public class Exercise_02 {
 
-    public static void main(String[] args) {
+
+
 
         // write code here
+        public static void main(String[] args) {
+
+            int x = 100;
+            double a = 100;
+            System.out.print(a);
+           //end of 1st section
+
+            double number = 10.5;
+           int num = (int) 10.5;
+           System.out.print(num);
+           // end of second section
+
 
     }
 }
