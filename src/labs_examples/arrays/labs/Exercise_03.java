@@ -18,6 +18,13 @@ package labs_examples.arrays.labs;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-        
-    }
-}
+        int[][] twod = new int[5][5];
+        for (int a = 3; a < twod.length; a = a * 3){
+            for(int b = 0; b < twod[a].length; b++) {
+                twod[a][b] = a * b;
+                System.out.print(twod[a][b] + " | ");
+            }
+                System.out.println();
+
+
+    }}}

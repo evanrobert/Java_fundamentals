@@ -8,4 +8,11 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_10 {
-}
+    public static void main(String[] args)
+    {
+    for(int z=0; z<=103; z++){
+        if((z%10) !=0){
+            continue;}
+        System.out.println(z);
+
+}}}

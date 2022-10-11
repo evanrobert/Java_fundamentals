@@ -22,5 +22,24 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
 
-}
+        int start =1;
+        int end = 11;
+        for(int i =start; i < end;i++ ){
+            for(int j= start; j<=end; j++){
+                System.out.format("%7d",(i*j));
+            }
+            System.out.println();
+
+
+                    }
+                }}
+
+
+
+
+
+
+
+

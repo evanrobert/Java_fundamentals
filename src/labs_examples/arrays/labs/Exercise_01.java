@@ -1,6 +1,7 @@
 package labs_examples.arrays.labs;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Arrays calculator
@@ -13,5 +14,28 @@ import java.util.Arrays;
  */
 
 public class Exercise_01 {
+    public static void main(String[] args) {
+
+        Scanner nums = new Scanner(System.in);
+        System.out.println("please list 10 numbers with space in between each " );
+        int values  = nums.nextInt();
+        nums.nextInt();
+        int[] Array = new int[10];
+        for(int i = 0; i <10; i++){
+            Array[i]= i+1;
+        }
+            int sum = 0;
+            for(int i = values; i <10; i++)
+            {
+                sum += Array[i];
+
+            }
+        System.out.println(sum);
+
+
+
+        }
+
 
 }
+
