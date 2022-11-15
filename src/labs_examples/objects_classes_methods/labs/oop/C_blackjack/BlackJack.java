@@ -88,7 +88,6 @@ public class BlackJack {
                             System.out.println("dealer drew " + dealer.getHand().addCard(deck.draw()));
 
 
-                            // I'm going to merge this comment into master
                             while (dealer.getHand().getHandValue() == 17) {
                                 System.out.println("dealer is at 17 and can no longer hit ");
                             }
