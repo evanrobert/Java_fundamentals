@@ -1,10 +1,35 @@
 
 1) Demonstrate the three forms of Polymorphism:
     - Overloading
+    public class fun {
+     System.out.println (" Sports ");
+     public class food extends fun{
+     System.out.println( " bannanas");
+     public class fun {
+          System.out.println (" Bikes ");
     - Overriding
-    - Interfaces
+    public static int  class sports{
+    public int add ( int a, int b);
+    return a + b;
+    }
+     public static double add (int  a, double b, int c );
+     return a+ b
+     System.out.println(5, 20);
 
-2) Demonstrate the three forms of polymorphism again - but in a new set of classes. We want to lock this in.
+
+
+    - Interfaces
+    public interface gettingPet {
+    public void moneyToSpendOnPet(int );
+    public boolean goToPetStore();
+    public String findAnimal();
+    public boolean animalAtHomeNow();
+
+
+    }
+
+
+done //2) Demonstrate the three forms of polymorphism again - but in a new set of classes. We want to lock this in.
 Challenge yourself. Build something you're proud of.
 
 3) Demonstrate using an interface as an instance variable - have a constructor that takes in the interface as a
