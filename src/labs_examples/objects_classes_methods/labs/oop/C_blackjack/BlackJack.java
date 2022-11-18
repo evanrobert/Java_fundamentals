@@ -88,7 +88,7 @@ public class BlackJack {
                             System.out.println("dealer drew " + dealer.getHand().addCard(deck.draw()));
 
 
-                            while (dealer.getHand().getHandValue() == 17) {
+                            while (true) {
                                 System.out.println("dealer is at 17 and can no longer hit ");
                             }
 
