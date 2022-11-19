@@ -65,7 +65,7 @@ public class Hand {
 
 
 
-// Look up how to clear and reset cards...
+
 
 
 

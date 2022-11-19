@@ -31,8 +31,7 @@ public class Deck {
     public int cardsLeft() {
         return cards.size() - count;
     }
-    //Implement function that lets you know Cards left.
-    // in controller ask how many cards are left in deck.
+
 }
 
 

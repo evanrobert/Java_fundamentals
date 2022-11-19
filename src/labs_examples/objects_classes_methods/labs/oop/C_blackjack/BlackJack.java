@@ -35,8 +35,11 @@ public class BlackJack {
 
 
             }
+            player.getHand().clear();
+            dealer.getHand().clear();
 
             System.out.println("please place your bet ");
+            System.out.println(" your current wallet amount is " + player.wallet);
             int betAmount = bet.nextInt();
             int loseTotal = player.getWallet() - betAmount;
             int winTotal = player.getWallet() + betAmount;
@@ -78,37 +81,28 @@ public class BlackJack {
 
                     }
                     playerStayOrBust = true;
-                    if (playerStayOrBust) {
-                        while (dealer.getHand().getHandValue() <= player.getHand().getHandValue() & player.getHand().getHandValue() < 21 &
-                                dealer.getHand().getHandValue() < 16) {
-                            System.out.println(" dealer has " + dealer.getHand().getHandValue() + " dealer will hit ");
+                    if (playerStayOrBust)
+                        System.out.println("dealer has " + dealer.getHand().getHandValue());
+                    if (dealer.getHand().getHandValue() > player.getHand().getHandValue())
+                        System.out.println("dealer wins");
+                    while (dealer.getHand().getHandValue() < player.getHand().getHandValue()) {
+                        System.out.println(dealer.getHand().addCard(deck.draw()));
 
-                            if (dealer.getHand().getHandValue() > player.getHand().getHandValue() && dealer.getHand().getHandValue() < 16)
-                                System.out.println(" dealer has " + dealer.getHand().getHandValue());
-                            System.out.println("dealer drew " + dealer.getHand().addCard(deck.draw()));
+                        if (dealer.getHand().getHandValue() > player.getHand().getHandValue() & dealer.getHand().getHandValue()
+                                <= 21)
+                            System.out.println("dealer wins with " + dealer.getHand().getHandValue());
 
 
-                            while (true) {
-                                System.out.println("dealer is at 17 and can no longer hit ");
-                            }
 
+                        if (dealer.getHand().getHandValue() > 21) {
+                            System.out.println("dealer busts with " + dealer.getHand().getHandValue());
+                            System.out.println("you win $" + betAmount + " your new total is " + winTotal);
                         }
-                    } else if (dealer.getHand().getHandValue() == 16) {
-                        System.out.println(dealer.getHand().getHandValue() + " game over " + winTotal);
 
 
-                        if (dealer.getHand().getHandValue() == 16 & dealer.getHand().getHandValue() > player.getHand().getHandValue())
-                            System.out.println("dealer stays at 16 " + dealer.getHand().getHandValue());
 
-                    }
-                    if (dealer.getHand().getHandValue() > 21) {
-                        System.out.println(" dealer busted with " + dealer.getHand().getHandValue());
 
-                        System.out.println(" you win  $ " + betAmount + " your wallet amount is " + "$" + winTotal);
-                    } else if (dealer.getHand().getHandValue() == 21) {
-                        System.out.println(" dealer has blackJack");
-                        if (dealer.getHand().getHandValue() > player.getHand().getHandValue()) ;
-                        System.out.println("Dealer wins with " + dealer.getHand().getHandValue() + " player loses " + "$" + loseTotal);
+
                     }
                     if (player.getHand().getHandValue() <= 21 & player.getHand().getHandValue() > dealer.getHand().getHandValue()) {
                         player.wallet = winTotal;
@@ -117,21 +111,23 @@ public class BlackJack {
 
 
                     } else {
-                        System.out.println();
+
                         player.wallet = loseTotal;
                     }
 
 
                     System.out.println("-----------------------");
-                    System.out.println(" your current wallet amount is " + player.wallet);
+
                 }
-                player.getHand().clear();
-                dealer.getHand().clear();
 
 
+                }
             }
         }
-    }
+
+
+
+
 
 
     private static boolean handBusted(Hand hand) {
