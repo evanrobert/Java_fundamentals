@@ -5,15 +5,44 @@
 *   Now that you have your air travel database all set up and populated, please demonstrate how to:
 *
 *       1.) Query all flights on a specific day
+        SELECT * FROM tickets where departuredate = "2018-01-01";
 *       2.) Query all flights between two specific cities on a specific day
+        SELECT starting_locationid, destination_locationid FROM airtravel.flights;
 *       3.) Query all passengers on a specific flight between two specific cities today
+        SELECT  destination_locationid, starting_locationid, passenger_id FROM airtravel.flights WHERE starting_locationid NOT LIKE destination_locationid;
+
 *       4.) Query the flight information for a specific passenger on a specific flight
+        SELECT p.first_name, p.last_name, f.destination_locationid, f.departure,f.arrival, f.flightid, f.starting_locationid
+        FROM passengers p
+        JOIN flights f
+        ON p.passengerid = f.passenger_id;
 *       5.) Query the passenger information for a specific user on a specific flight yesterday
+        SELECT  p.first_name,p.last_name,p.state, f.starting_locationid, f.destination_locationid,f.arrival,f.departure
+        FROM passengers p
+        JOIN flights f
+        ON p.passengerid = f.flightid
+        WHERE departure = "2022-12-24";
 *       6.) Query the number of flights between two specific cities this week, month, and year
+SELECT * FROM airtravel.flights where  flights.destination_locationid = "MIN";
 *       7.) Query the number of passengers that travelled between two specific cities today, this week, month and year
+        SELECT  passengers.first_name, passengers.last_name, flights.destination_locationid, flights.starting_locationid, flights.departure,flights.arrival
+        FROM passengers
+        JOIN flights
+        ON passengerid = flightid
+        WHERE flights.starting_locationid = "SEA";
+
 *       8.) Insert records for new flights between airports
+INSERT INTO flights (arrival, departure,starting_locationid,destination_locationid,passenger_id)
+VALUES ("2021-12-12","21-12-11","NYC","SEA",22);
 *       9.) Insert records for new tickets and passengers on specific flights
+INSERT INTO passengers (first_name, Last_name,address,city,state,country,zipcode)
+VALUES ("steve", "stevenson","22144","lincon city"," Oregon","US","42751");
 *       10.) Update meal preference (or something similar) for a specific passenger on a specific flight
+SELECT meals.mealprice, meals.snackprice, passengers.first_name,passengers.last_name
+from meals
+Join passengers
+On passengers.passengerid= meals.customer_id
+WHERE meals.mealprice > 0;
 *       Bonus: Have some fun - get creative - what else can you do? Flex those SQL muscles and show us what
 *           you've got! :)
 *

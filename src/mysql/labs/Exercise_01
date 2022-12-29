@@ -10,32 +10,63 @@
  *          a. id (auto increment)
  *          b. first_name
  *          c. age
+ DONE
  *
  *      3.) Create a new table "teachers_students" with the following fields:
  *          a. id (auto increment)
  *          b. student_id
  *          c. teacher_id
+ DONE
  *
  *      4.) Create a new table "teachers" with the following fields:
  *          a. id (auto increment)
  *          b. first_name
  *          c. last_name
  *          d. subject
+ DONE
  *
  *      5.) Create the appropriate foreign key constraints in the "teachers_students" table.
- *
+ *              DONE
  *      6.) Populate each table with at least 5 records. Use the "teachers_students" to associate various
  *          teachers with various students.
- *
+ *   lebron 	james	gmail23@gmail.com
+     santa	clause	gmail1@gmail.com
+     easter	bunny	bunny@gmail.co
+     mac	cheese	macandcheese@yahoo.com
  *      7.) Write queries (and paste them below) for each of the following tasks:
  *          a. select all students
+      lebron james	gmail23@gmail.com
+      santa	clause	gmail1@gmail.com
+      easter bunny	bunny@gmail.co
+      mac	cheese	macandcheese@yahoo.com
  *          b. select all teacher who teach "Math" (choose a subject you included)
+                1	BILL	NYE	science
  *          c. use a join query to select all students with a certain teacher
+            SELECT s.student_id, s.course_id, T.teacher_id
+            from students_courses s
+            JOIN teachers_students t
+            ON s.student_id = t.student_id
+            WHERE s.student_id = t.teacher_id;
  *          d. use a join query to select all students with taking a certain subject
  *          e. update a record in the student table
+                UPDATE students set first_name = "evan" WHERE id = 1;
  *          f. add a record to the teacher table
+                UPDATE teachers set first_name = "HEYOOOO" WHERE teachers_id = 2;
  *
  *       8.) Export the schema to a dump file and copy it to this folder.
- *
+ *           Directory: C:\Users\evanl\OneDrive\Documents\dumps
+
+
+          Directory: C:\Users\evanl\OneDrive\Documents\dumps\Dump20221224
+
+
+        Mode                 LastWriteTime         Length Name
+        ----                 -------------         ------ ----
+        -a---l        12/24/2022   9:18 PM           2014 college_courses.sql
+        -a---l        12/24/2022   9:18 PM           2352 college_routines.sql
+        -a---l        12/24/2022   9:18 PM           2177 college_students.sql
+        -a---l        12/24/2022   9:18 PM           2407 college_students_courses.sql
+        -a---l        12/24/2022   9:18 PM           2211 college_teachers.sql
+        -a---l        12/24/2022   9:18 PM           2189 college_teachers_students.sql
  *
  */
