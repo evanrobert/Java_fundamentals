@@ -1,5 +1,8 @@
 package labs_examples.datastructures.queue.labs;
 
+import java.util.Arrays;
+import java.util.function.Consumer;
+
 /**
  *      Queues - Exercise_02
  *
@@ -16,3 +19,50 @@ package labs_examples.datastructures.queue.labs;
  *      6) contain a method to print out the data of all elements in the Queue
  *
  */
+public class Exercise_02<T> {
+    private boolean isEmpty;
+
+    T[] data = (T[]) new Object[100];
+
+    public boolean isEmpty() {
+        isEmpty = true;
+return isEmpty=true;
+    }
+
+    public int resizeFull() {
+        int x = Integer.parseInt(null);
+        for(int i =0; i < data.length; i++){
+            if(data.length > .75){
+                x = data.length * 2;
+            }
+
+        }
+        return(x);
+
+    }
+    public int resizeEmpty() {
+        int x = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data.length <= 25) {
+                x = data.length / 2;
+            }
+        }
+        return (x);
+    }
+    public void peekFirst(){
+        Arrays.stream(data).findFirst();
+
+
+
+    }
+    public Consumer<? super T> peekLast(){
+        Arrays.stream(data).peek(peekLast());
+        return null;
+}
+    public double size(Double length ){
+        double totalSize =   data.length;
+        return totalSize;
+    }
+    public void printElements() {
+        System.out.println(data.toString());
+    }}
